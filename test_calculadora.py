@@ -1,5 +1,5 @@
 import unittest
-from Calculadora import sumar, restar, multiplicar, dividir
+from Calculadora import potencia, sumar, restar, multiplicar, dividir
 
 class TestCalculadora(unittest.TestCase):
 
@@ -18,6 +18,8 @@ class TestCalculadora(unittest.TestCase):
     def test_dividir_por_cero(self):
         with self.assertRaises(ValueError):
             dividir(5, 0)
+    def test_potencia(self):
+        self.assertEqual(potencia(2, 3), 8)
 
 if __name__ == '__main__':
     unittest.main()
