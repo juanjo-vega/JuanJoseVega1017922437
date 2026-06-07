@@ -14,3 +14,8 @@ def dividir(a, b):
 
 def potencia(base, exponente):
     return base ** exponente
+
+def raiz_cuadrada(n):
+    if n < 0:
+        raise ValueError("No se puede calcular la raíz de un número negativo")
+    return n ** 0.5
